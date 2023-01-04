@@ -1,0 +1,11 @@
+.card-detail {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 90px;
+}
+
+.card-detail strong {
+  padding-top: 7rem !important;
+}

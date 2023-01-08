@@ -1,0 +1,425 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <title>Booking</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/assets/scss/style.scss">
+    <link rel="stylesheet" href="assets/css/rooms.css">
+    <link rel="stylesheet" href="assets/css/animated.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+
+
+  </head>
+
+<body>
+
+  <!-- ***** Preloader Start ***** -->
+  <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <!-- ***** Preloader End ***** -->
+
+  <!-- ***** Header Area Start ***** --> 
+  <nav class="navbar navbar-expand-lg ">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Back</a>
+      <button type="button" class="navbar-toggler ms-auto" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <span><i class="fa-solid fa-user"></i></span>
+	    </button>
+      <div class="">
+        <div class="collapse  navbar-collapse ms-auto" id="navbarSupportedContent">
+          <div>
+            <div class="dropdown-center">
+              <button class="btn border-0 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Sign In
+              </button>
+              <div class="dropdown-menu" style="width: 260px;">
+                <form class="container mw-100">
+                  <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Username</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1">
+                  </div>
+                  <div class="d-grid gap-2">
+                    <button class="btn btn-primary" type="button">Sign In</button>
+                    <button class="btn btn-primary" type="button">Sign in with google</button>
+                  </div>
+                  <div class="row forgot-signup">
+                    <div class="col-sm-6"><p>Forgot password</p></div>
+                    <div class="col-sm-6"><p>Create account</p></div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  
+  <div class="recent-listing" style="border-top: none;">
+    <div class="container">
+      <section class="h-100 gradient-custom">
+        <div class="container py-5">
+          <div class="row d-flex justify-content-center my-4">
+            <div class="col-md-8">
+              <!-- <div class="card mb-4">
+                <div class="card-body">
+                  <div class="container">
+                    <p>Sign in for faster registration</p>
+                    <div class="row text-center">
+                      <div class="col-md-6 d-grid">
+                        <button class="btn btn-primary">Google</button>
+                      </div>
+                      <div class="col-md-6 d-grid">
+                        <button class="btn btn-primary">I have account</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div> -->
+
+              <div class="card mb-4">
+                <div class="card-body">
+                  <div class="container">
+                    <form action="">
+                      <div class="row g-3">
+                        <div class=" col-lg-2 mb-3">
+                          <label for="fullName">Title</label>
+                          <select class="form-select" aria-label="Default select example">
+                            <option selected>Mr. </option>
+                            <option value="1">Mrs.</option>
+                          </select>
+                        </div> 
+                        <div class=" col-lg-10 mb-3">
+                          <label for="fullName">Full name</label>
+                          <input type="text" class="form-control"  id="fullName" placeholder="Full Name">
+                        </div>  
+                        <div class="col-lg-6 mb-3">
+                          <label for="fullName" class="form-label">Country Code</label>
+                          <select class="form-select" aria-label="Default select example">
+                            <option selected>Indonesia (+62)</option>
+                            <option value="1">Konoha (+26)</option>
+                          </select>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                          <label for="mobile" class="form-label">Mobile number</label>
+                          <input type="text" id="mobile" name="mobile" placeholder="Mobile Number e.g 812345678" class="form-control">
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                          <label for="" class="form-label">Natioanlity</label>
+                          <select class="form-select" aria-label="Default select example">
+                            <option selected>Indonesia</option>
+                            <option value="1">Konoha</option>
+                          </select>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                          <label for="email" class="form-label">Email</label>
+                          <input type="text" id="email" name="email" placeholder="Email Address" class="form-control">
+                        </div>
+                      </div>                    
+                    </form>
+                  </div>
+                </div>
+              </div>
+        
+              <div class="card mb-4">
+                <div class="card-body">
+                  <div class="accordion accordion-flush" id="accordionExample">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                          Let us know what you need
+                        </button>
+                        <div class="container">
+                          <p class="ps-2 pe-2">Have a special request? Ask, and the property will do its best to meet your wish. <br>(Note that special request are not guarenteed and may incur charges)</p>
+                        </div>
+                      </h2>
+                      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+              </div>
+              <div class="card mb-4">
+                
+                <div class="card-body">
+                  <div class="container">
+                    <div class="card-title">
+                      <strong>Your booking summary</strong>
+                    </div>
+                    <p><strong>ROOMS</strong></p>
+                    <div class="hotel-card bg-white rounded-lg shadow overflow-hidden d-block d-lg-flex">
+                      <div class="hotel-card_images">
+                        <div id="carouselExampleControls" class="carousel slide h-100" data-bs-ride="carousel">
+                          <div class="carousel-inner h-100">
+                            <div class="carousel-item h-100 active">
+                            <img src="/assets/images/villa-1.jpg" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item h-100">
+                            <img src="/assets/images/villa-2.jpg" class="d-block w-100" alt="...">
+                            </div>
+                          </div>
+                          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                          </button>
+                          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                          </button>
+                          </div>
+                      </div>
+                      <div class="hotel-card_info p-4">
+                        <div class="d-flex align-items-center mb-2">
+                          <h5 class="mb-0 me-2">Villa Big</h5>
+                          <div>
+                            <!-- <i class="fa fa-star text-warning"></i> -->
+                            <!-- <i class="fa fa-star text-warning"></i> -->
+                            <!-- <i class="fa fa-star text-warning"></i> -->
+                            <!-- <i class="fa fa-star text-warning"></i> -->
+                            <!-- <i class="fa fa-star text-warning"></i> -->
+                          </div>
+                          
+                        </div>
+                        <div class="d-flex justify-content-between align-items-end">
+                          <div class="hotel-card_details">
+                            <div class="text-muted mb-2"><i class="fas fa-map-marker-alt"></i> Menganti Beach</div>
+                            <div class="mb-2"><span class="badge bg-secondary">4.5</span> <a href="#!" class="text-muted">(245 ratings & 56 reviews)</a></div>
+                            <div class="amnities d-flex mb-3">
+                              <img class="me-2" src="/assets/images/icons/desk-bell.svg" data-toggle="tooltip" data-placement="top" title="Desk bell" alt="Desk bell">
+                              <img class="me-2" src="/assets/images/icons/single-bed.svg" data-toggle="tooltip" data-placement="top" title="Single Bed" alt="Single Bed">
+                              <img class="me-2" src="/assets/images/icons/towels.svg" data-toggle="tooltip" data-placement="top" title="Towels" alt="Towels">
+                              <img class="me-2" src="/assets/images/icons/wifi.svg" data-toggle="tooltip" data-placement="top" title="Wifi" alt="Wifi">
+                            </div>
+                            <ul class="hotel-checklist ps-0 mb-0">
+                              <li><i class="fa fa-check text-success"></i> Lorem ipsum dolor</li>
+                              <li><i class="fa fa-check text-success"></i> Cras lectus purus, </li>
+                              <li><i class="fa fa-check text-success"></i> ornare eget congue</li>
+                            </ul>
+                          </div>
+                          <div class="hotel-card_pricing text-center">
+                            <h3>IDR 500K</h3>
+                            <div class="d-flex">
+                               <h6 class="text-striked text-muted me-2">IDR 999K</h6>
+                               <h6 class="text-success">32% off</h6>
+                            </div>
+                            <!-- <button class="btn btn-primary">Check Rooms</button> -->
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4">
+                <div class="card-header py-3">
+                  <h5 class="mb-0">Your staying date</h5>
+                </div>
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center">
+
+                        <div class="check-in">
+                          <span>Check-in</span>
+                          <div class="d-flex flex-row align-items-center">
+                            <h1 class="date-o">24</h1>
+                            <div class="d-flex flex-column ml-2 date">
+                              <span>July 20</span>
+                              <span>Friday</span>
+                            </div>
+                          </div>
+                        </div>
+              
+              
+                        <div class="d-flex flex-column align-items-center">
+                          <i class="fa fa-moon-o"></i>
+                          <small>2</small>
+                        </div>
+                        <div class="check-out">
+                          <span>Check-out</span>
+                          <div class="d-flex flex-row align-items-center">
+                            <h1 class="date-o">25</h1>
+                            <div class="d-flex flex-column ml-2 date">
+                              <span>July 20</span>
+                              <span>Friday</span>
+                            </div>
+              
+                          </div>
+                        </div>
+              
+              
+                      </div>
+                </div>
+              </div>
+
+              <div class="card mb-4">
+                <div class="card-header py-3">
+                  <h5 class="mb-0">Your price summary</h5>
+                </div>
+                <div class="card-body">
+                  <ul class="list-group list-group-flush">
+                    <li
+                      class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
+                      Price
+                      <span>IDR 500,000</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                      Tax
+                      <span>Free</span>
+                    </li>
+                    <li
+                      class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 mb-3">
+                      <div>
+                        <strong>Total amount</strong>
+                      </div>
+                      <span><strong>IDR 500,000</strong></span>
+                    </li>
+                  </ul>
+      
+                  <button type="button" class="btn btn-secondary">
+                    Continue to payment
+                  </button>
+                </div>
+              </div>
+              
+            </div>
+
+            
+            
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="about">
+            <div class="logo">
+              <img src="assets/new_image/Logo_Black.svg" alt="Plot Listing">
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate fugiat optio nihil placeat ut vero voluptatibus quo nulla pariatur earum.</p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="helpful-links">
+            <h4>Helpful Links</h4>
+            <div class="row">
+              <div class="col-lg-6 col-sm-6">
+                <ul>
+                  <li><a href="#">Categories</a></li>
+                  <li><a href="#">Reviews</a></li>
+                  <li><a href="#">Listing</a></li>
+                  <li><a href="#">Contact Us</a></li>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <ul>
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="#">Awards</a></li>
+                  <li><a href="#">Useful Sites</a></li>
+                  <li><a href="#">Privacy Policy</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="contact-us">
+            <h4>Contact Us</h4>
+            <p>27th Street of New Town, Digital Villa</p>
+            <div class="row">
+              <div class="col-lg-6">
+                <a href="#">010-020-0340</a>
+              </div>
+              <div class="col-lg-6">
+                <a href="#">090-080-0760</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="sub-footer">
+            <p>Copyright © 2022 Panggon Turu Co., Ltd. All Rights Reserved.
+    
+		
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">
+            <form class="container">
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Username</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1">
+              </div>
+              <div class="d-grid gap-2">
+                <button class="btn btn-primary" type="button">Button</button>
+                <button class="btn btn-primary" type="button">Button</button>
+              </div>
+            </form>
+          </div>
+      </div>
+    </div>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js" integrity="sha512-gY25nC63ddE0LcLPhxUJGFxa2GoIyA5FLym4UJqHDEMHjp8RET6Zn/SHo1sltt3WuVtqfyxECP38/daUc/WVEA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="assets/js/animation.js"></script>
+  <script src="assets/js/imagesloaded.js"></script>
+  <script src="assets/js/custom.js"></script>
+
+  <script>
+		$(function () {
+			$('[data-toggle="tooltip"]').tooltip()
+		})
+	</script>
+
+</body>
+
+</html>
